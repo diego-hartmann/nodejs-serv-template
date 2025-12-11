@@ -2,7 +2,7 @@ import express from 'express';
 import { securityMiddleware } from './middlewares/security.middleware';
 import { requestLoggerMiddleware } from './middlewares/request-logger.middleware';
 import { errorHandlerMiddleware } from './middlewares/error-handler.middleware';
-import { routes } from './routes';
+import routes from './routes';
 
 export const app = express();
 

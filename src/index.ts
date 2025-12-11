@@ -1,3 +1,3 @@
 import ignite from './ignite';
 
-ignite()
+ignite();
