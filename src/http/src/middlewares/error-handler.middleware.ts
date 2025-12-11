@@ -1,6 +1,6 @@
 import type express from 'express';
 import { type ErrorRequestHandler } from 'express';
-import { HTTP_ERROR, HttpErrorHandler } from '../utils/http-error.util';
+import { HTTP_ERROR, HttpErrorHandler } from '../../../utils/http-error.util';
 
 const createErrorInstance = (err: unknown): HttpErrorHandler => {
   if (err instanceof HttpErrorHandler) return err;

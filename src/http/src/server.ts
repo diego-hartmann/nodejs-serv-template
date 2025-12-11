@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import { app } from './app';
-import { logger } from '../../../config/logger';
+import { logger } from '../../config/logger';
 dotenv.config();
 
 export function startExpressHttpServer(): void{
