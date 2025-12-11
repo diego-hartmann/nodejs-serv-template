@@ -16,7 +16,8 @@
     "noUnusedParameters": false,
     "allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
-    "allowJs": false
+    "allowJs": false,
+    "verbatimModuleSyntax": false
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

@@ -1,8 +1,8 @@
 import express from 'express';
-import { securityMiddleware } from './middlewares/security.middleware';
-import { requestLoggerMiddleware } from './middlewares/request-logger.middleware';
-import { errorHandlerMiddleware } from './middlewares/error-handler.middleware';
-import { router as healthRouter } from './routes/health';
+import { securityMiddleware } from '../../../middlewares/security.middleware';
+import { requestLoggerMiddleware } from '../../../middlewares/request-logger.middleware';
+import { errorHandlerMiddleware } from '../../../middlewares/error-handler.middleware';
+import { routes } from '../../../routes';
 
 export const app = express();
 
@@ -16,8 +16,7 @@ app.use(securityMiddleware);
 // logging HTTP
 app.use(requestLoggerMiddleware);
 
-// routes
-app.use('/health', healthRouter);
+app.use(routes);
 
 app.get('/', (_req, res) => {
   res.json({ message: 'PH Node Service Template is running.' });
